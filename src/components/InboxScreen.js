@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import TaskList from './TaskList';
+import Tile from './Tile'
 
 export function PureInboxScreen({ error }) {
   if (error) {

@@ -13,7 +13,7 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
         />
         <span className="checkbox-custom" onClick={() => onArchiveTask(id)} />
       </label>
-      <div className="title" style={{background: "red"}}>
+      <div className="title">
         <input 
           type="text" 
           value={title} 
@@ -25,9 +25,9 @@ export default function Task({ task: { id, title, state }, onArchiveTask, onPinT
 
       <div className="actions" onClick={event => event.stopPropagation()}>
         {state !== 'TASK_ARCHIVED' && (
-          <a onClick={() => onPinTask(id)}>
+          <div onClick={() => onPinTask(id)}>
             <span className={`icon-star`} />
-          </a>
+          </div>
         )}
       </div>
     </div>
